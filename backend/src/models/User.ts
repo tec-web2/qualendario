@@ -1,16 +1,9 @@
 import mongoose, { Schema, Document } from 'mongoose';
-
-// Interface que representa um usuário
-interface IUser extends Document {
-  nome: string;
-  email: string;
-  senha_hash: string;
-  data_criacao: Date;
-}
+import IUser from './dtos/IUser';
 
 // Esquema do usuário
 const userSchema = new Schema<IUser>({
-  nome: {
+  name: {
     type: String,
     required: true,
     maxlength: 255, // Equivalente ao VARCHAR(255) no SQL
@@ -33,6 +26,6 @@ const userSchema = new Schema<IUser>({
 });
 
 // Modelo do usuário
-const User = mongoose.model<IUser>('Usuario', userSchema);
+const UserMongo = mongoose.model<IUser>('Usuario', userSchema);
 
-export default User;
+export default UserMongo;
