@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "8b503c2e-a9da-481c-be67-f0c47a7a133a",
+		"name": "qualendario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35951844"
+	},
+	"item": [
+		{
+			"name": "quadra",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/quadra/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"quadra",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjUyMDI4NTIsImV4cCI6MTcyNzc5NDg1Miwic3ViIjoiNjZkNDgxOGZhZjYwYWZhYzUyODljNWU4In0.03PV_jTsKITc_3iivRZpsc28HkE-TJjIp6xnU8y7W9w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Quadra 2\",\r\n    \"localizacao\": \"Rua 2 Cidade 2\",\r\n    \"tipo\": \"Futebol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/quadra/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"quadra",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "agendamento",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjUxMzQwMDgsImV4cCI6MTcyNzcyNjAwOCwic3ViIjoiNjZkMzY0N2Q3MmZkODZiMmQyY2I5MjYzIn0.3A1XbgiRHIRk3eUz52QK5b0-9X2NhBCgIgRgS2bQRto",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quadraId\": \"66d46c91ac06efe95d54481d\",\r\n    \"dataHoraInicio\": \"2024-09-01T15:30:00\",\r\n    \"dataHoraFim\": \"2024-09-01T16:30:00\",\r\n    \"status\": \"ativo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/agendamento/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"agendamento",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/agendamento/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"agendamento",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjUxMzQwMDgsImV4cCI6MTcyNzcyNjAwOCwic3ViIjoiNjZkMzY0N2Q3MmZkODZiMmQyY2I5MjYzIn0.3A1XbgiRHIRk3eUz52QK5b0-9X2NhBCgIgRgS2bQRto",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agendamentoId\": \"66d493fcefea07240a33dbe5\",\r\n    \"quadraId\": \"66d46c91ac06efe95d54481d\",\r\n    \"dataHoraInicio\": \"2024-09-01T15:30:00\",\r\n    \"dataHoraFim\": \"2024-09-01T18:30:00\",\r\n    \"status\": \"ativo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/agendamento/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"agendamento",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"peteca2\",\r\n    \"email\": \"inaciofilho.lima2@gmail.com\",\r\n    \"password\": \"inacio123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjUxMzQwMDgsImV4cCI6MTcyNzcyNjAwOCwic3ViIjoiNjZkMzY0N2Q3MmZkODZiMmQyY2I5MjYzIn0.3A1XbgiRHIRk3eUz52QK5b0-9X2NhBCgIgRgS2bQRto",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3333/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjUxMzQwMDgsImV4cCI6MTcyNzcyNjAwOCwic3ViIjoiNjZkMzY0N2Q3MmZkODZiMmQyY2I5MjYzIn0.3A1XbgiRHIRk3eUz52QK5b0-9X2NhBCgIgRgS2bQRto",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"inaciofilho.lima@gmail.com\",\r\n    \"password\": \"inacio123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowUserDeslogado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3333/user/66d48e81be9fd0862ce953b0",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user",
+						"66d48e81be9fd0862ce953b0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
