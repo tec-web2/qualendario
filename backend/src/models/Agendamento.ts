@@ -1,13 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-
-// Interface que representa um agendamento
-interface IAgendamento extends Document {
-  usuarioId: mongoose.Types.ObjectId;
-  quadraId: mongoose.Types.ObjectId;
-  dataHoraInicio: Date;
-  dataHoraFim: Date;
-  status: string;
-}
+import IAgendamento from './dtos/IAgendamento';
 
 // Esquema de agendamento
 const agendamentoSchema = new Schema<IAgendamento>({
@@ -37,6 +29,6 @@ const agendamentoSchema = new Schema<IAgendamento>({
 });
 
 // Modelo de agendamento
-const Agendamento = mongoose.model<IAgendamento>('Agendamento', agendamentoSchema);
+const AgendamentoMongo = mongoose.model<IAgendamento>('Agendamento', agendamentoSchema);
 
-export default Agendamento;
+export default AgendamentoMongo;

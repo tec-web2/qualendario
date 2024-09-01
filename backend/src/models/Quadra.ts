@@ -1,12 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-
-// Interface que representa uma quadra de esporte
-interface IQuadra extends Document {
-  nome: string;
-  localizacao: string;
-  tipo: string;
-  data_criacao: Date;
-}
+import { IQuadra } from './dtos/IQuadra';
 
 // Esquema da quadra de esporte
 const quadraSchema = new Schema<IQuadra>({
@@ -32,6 +25,6 @@ const quadraSchema = new Schema<IQuadra>({
 });
 
 // Modelo da quadra de esporte
-const Quadra = mongoose.model<IQuadra>('Quadra', quadraSchema);
+const QuadraMongo = mongoose.model<IQuadra>('Quadra', quadraSchema);
 
-export default Quadra;
+export default QuadraMongo;

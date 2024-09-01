@@ -11,9 +11,14 @@ export function ensureAuthenticate(request: Request, response: Response, next: N
     }
     const token = authHeader.split(' ')[1];
     try {
-        const {sub} = verify(token, 'secretIOT');
+        const { sub } = verify(token, 'secretIOT');
         
-        next();
+        if (typeof sub === 'string') {
+            request.params.user_id = sub;
+            next();
+        } else {
+            throw new AppError('Invalid token')
+        }
     } catch (error) {
         throw new AppError('Token invalid', 401);
     }
