@@ -15,7 +15,6 @@ export default class LoginService {
         if (!passwordMath){
             throw new AppError("Incorrect email or password", 401);
         }
-        console.log(user._id.toString());
         
         const token = sign({}, 'secretIOT', {
             subject: user._id.toString(),
