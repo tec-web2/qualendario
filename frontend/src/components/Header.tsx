@@ -2,6 +2,7 @@ import Image from 'next/image'
 import quack from '/public/assets/quack.png'
 import logo from '/public/assets/qualendario-logo.png'
 import profile from '/public/assets/profile-user.png'
+import Link from 'next/link';
 
 export default function Header(){
     return(
@@ -13,7 +14,9 @@ export default function Header(){
                 <Image src={logo} alt={''} className='w-1/2'></Image>
             </div>
             <div>
-                <Image src={profile} alt={''} className='w-3/5'></Image>
+                <Link href={'/perfil'}>
+                    <Image src={profile} alt={''} className='w-3/5'></Image>
+                </Link>
             </div>
         </header>
     )

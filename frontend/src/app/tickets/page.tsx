@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import logoFull from '/public/assets/qualendario-logo-full.png'
 
-export default function Page(){
+export default function Login(){
     return(
         <div className=" bg-img-login bg-no-repeat bg-cover bg-center h-full max-h-full rounded-3xl items-center flex flex-col">
             <div className="flex flex-col items-center h-full justify-center object-fit">
@@ -21,7 +21,10 @@ export default function Page(){
                     </form>
                 </div>
                 <div>
-                    <button className="bg-yellow rounded-md text-white text-center content-center px-8 py-2 mt-7">cadastrar-se</button>
+                    <button className="bg-yellow rounded-md text-white text-center content-center px-8 py-2 mt-7">
+                        <a href="/cadastro">
+                        cadastrar-se
+                        </a></button>
                 </div>
             </div>
         </div>
