@@ -14,6 +14,12 @@ const userSchema = new Schema<IUser>({
     unique: true,
     maxlength: 255, // Equivalente ao VARCHAR(255) no SQL
   },
+  cpf: {
+    type: String,
+    required: true,
+    unique: true,
+    maxlength: 255, // Equivalente ao VARCHAR(255) no SQL
+  }, 
   senha_hash: {
     type: String,
     required: true,

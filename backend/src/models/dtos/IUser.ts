@@ -3,6 +3,7 @@ interface IUser extends Document {
     email: string;
     senha_hash: string;
     data_criacao: Date;
+    cpf: string
     _id: string;
 }
 

@@ -11,6 +11,7 @@ export class CreateUsersService {
       const newUser = new UserMongo({
         name: data.name,
         email: data.email,
+        cpf: data.cpf,
         senha_hash: password_hash,
       });
       const savedUser = await newUser.save();

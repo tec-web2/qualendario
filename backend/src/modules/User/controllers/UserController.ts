@@ -10,14 +10,16 @@ export class UsersController {
             const bodySchema = Zod.object({
                 name: Zod.string(),
                 email: Zod.string().email(),
+                cpf: Zod.string(),
                 password: Zod.string().min(6)
             }).strict();
-            let {name, email, password} = bodySchema.parse(request.body);
+            let {name, email, password, cpf} = bodySchema.parse(request.body);
             const createUserService = new CreateUsersService()
-            const user = await createUserService.execute({name, email,password});
+            const user = await createUserService.execute({name, email,password, cpf});
             const userResponse: UserRes = {
                 name: user.name,
                 email: user.email,
+                cpf: user.cpf,
                 id: user._id
             };
             return response.json(userResponse);
