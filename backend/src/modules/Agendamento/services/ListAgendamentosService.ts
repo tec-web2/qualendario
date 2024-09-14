@@ -5,7 +5,7 @@ import IAgendamento from "../../../models/dtos/IAgendamento";
 export class ListAgendamentosService {
     public async execute(): Promise<IAgendamento[]> {
         try {
-            const agendamentos = await AgendamentoMongo.find({});
+            const agendamentos = await AgendamentoMongo.find({}).populate("usuarioId");
             if (!agendamentos) {
                 throw new AppError("agendamentos não encontrada", 404);
             }

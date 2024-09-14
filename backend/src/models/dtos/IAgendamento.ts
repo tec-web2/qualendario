@@ -6,5 +6,6 @@ export default interface IAgendamento extends Document {
     dataHoraInicio: Date;
     dataHoraFim: Date;
     status: string;
+    lembreteEnviado: Boolean;
     _id: string;
 }

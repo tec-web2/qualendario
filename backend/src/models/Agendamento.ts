@@ -26,6 +26,7 @@ const agendamentoSchema = new Schema<IAgendamento>({
     enum: ['ativo', 'cancelado'],
     default: 'ativo',
   },
+  lembreteEnviado: { type: Boolean, default: false }
 });
 
 // Modelo de agendamento
