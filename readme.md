@@ -67,7 +67,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
    Clone o repositório do GitHub para a sua máquina local.
    ```bash
-   git clone https://github.com/seuusuario/qualendario.git
+   git clone https://github.com/tec-web2/qualendario.git
    ```
 
 2. **Acesse o diretório do projeto:**
