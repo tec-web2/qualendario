@@ -22,6 +22,7 @@ const config: Config = {
         'yellow': '#f2bb13',
         'orange': '#f28627',
         'gray': '#d9d9d9',
+        'light-gray': '#E8E8E8',
         'purple': '#4F378B',
         'dark': '#150F25',
       },

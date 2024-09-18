@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
-import "../globals.css";
+import "../../globals.css";
 
 
 const comfortaa =Comfortaa ({ subsets: ["latin"] });
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${comfortaa.className} bg-white flex flex-col h-screen p-10`}>
+      <body className={`${comfortaa.className} bg-dark flex flex-col h-screen p-10`}>
           <main className="h-full">
           {children}
           </main>

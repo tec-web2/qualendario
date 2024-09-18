@@ -6,15 +6,17 @@ import tickets from '../public/assets/ticket.png'
 import logout from '/public/assets/logout.png'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'; 
+import { logoutUser } from '@/services/signout';
 
 
 export default function Sidebar(){
     const pathname = usePathname();
+    const signout = logoutUser();
 
     const links = [
-        {href: '/quadras', img:'/assets/menu.png', alt:'menu'},
-        {href: '/calendar', img:'/assets/calendar.png', alt:'menu'},
-        {href: '/tickets', img:'/assets/ticket.png', alt:'menu'},
+        {href: '/', img:'/assets/menu.png', alt:'menu'},
+        {href: '/calendario', img:'/assets/calendar.png', alt:'menu'},
+        {href: '/reservas', img:'/assets/ticket.png', alt:'menu'},
     ]
 
     return(
@@ -47,9 +49,9 @@ export default function Sidebar(){
                 </li> */}
             </ul>
             <div>
-                <a href="./tickets">
+                <button onClick={signout}>
                 <Image src={logout} alt={''} width={35}></Image>
-                </a>
+                </button>
             </div>
       </aside>
     )
